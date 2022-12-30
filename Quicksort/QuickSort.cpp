@@ -3,14 +3,18 @@
 #include <iostream>
 #include <vector>
 
-void quicksort( std::vector<int> &sequence, int low, int high ) {
-    if ( low < high ) {
+void quicksort( std::vector< int >& sequence, int low, int high )
+{
+    if ( low < high )
+    {
         int pivot = sequence[ high ];
         int i = low - 1;
         int j = low;
 
-        for ( ; j < high; ++j ) {
-            if ( sequence[ j ] <= pivot ) {
+        for ( ; j < high; ++j )
+        {
+            if ( sequence[ j ] <= pivot )
+            {
                 ++i;
                 std::swap( sequence[ i ], sequence[ j ] );
             }
@@ -25,20 +29,23 @@ void quicksort( std::vector<int> &sequence, int low, int high ) {
     }
 }
 
-void quicksortMain() {
-    std::srand( time( NULL ));
+void quicksortMain()
+{
+    std::srand( time( NULL ) );
 
     int sequenceSize = 100;
-    std::vector<int> sequence( sequenceSize );
+    std::vector< int > sequence( sequenceSize );
 
-    for ( int i = 0; i < sequenceSize; ++i ) {
+    for ( int i = 0; i < sequenceSize; ++i )
+    {
         sequence[ i ] = std::rand() % 1000;
     }
 
     quicksort( sequence, 0, sequenceSize - 1 );
 
     std::cout << "Sorted vector: \n[";
-    for ( int i = 0; i < sequenceSize; ++i ) {
+    for ( int i = 0; i < sequenceSize; ++i )
+    {
         if ( i % 10 == 0 ) std::cout << "\n";
         if ( i != sequenceSize - 1 ) std::cout << sequence[ i ] << ", ";
         else std::cout << sequence[ i ];
