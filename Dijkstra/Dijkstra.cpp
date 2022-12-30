@@ -64,7 +64,24 @@ void dijkstraMain()
 
     // Getting the shortest paths from source node 3
     std::vector< int > shortestPaths = dijkstra( graph, 3 );
-    std::cout << "Dijkstra shortest paths: \n[";
+    std::cout << "\nDijkstra shortest paths for graph 1: \n[";
     for ( int path : shortestPaths ) std::cout << path << ", ";
+    std::cout << "]";
+
+    // Adjacency matrix representation of a graph with edge weights
+    std::vector< std::vector< int>> graph2 = { { INF, 4, INF, INF, INF, INF, INF, 8, INF },
+                                              { 4, INF, 8, INF, INF, INF, INF, 11, INF },
+                                              { INF, 8, INF, 7, INF, 4, INF, INF, 2 },
+                                              { INF, INF, 7, INF, 9, 14, INF, INF, INF },
+                                              { INF, INF, INF, 9, INF, 10, INF, INF, INF },
+                                              { INF, INF, 4, 14, 10, INF, 2, INF, INF },
+                                              { INF, INF, INF, INF, INF, 2, INF, 1, 6 },
+                                              { 8, 11, INF, INF, INF, INF, 1, INF, 7 },
+                                              { INF, INF, 2, INF, INF, INF, 6, 7, INF } };
+
+    // Getting the shortest paths from source node 0
+    std::vector< int > shortestPaths2 = dijkstra( graph2, 0 );
+    std::cout << "\n\nDijkstra shortest paths for graph 2: \n[";
+    for ( int path : shortestPaths2 ) std::cout << path << ", ";
     std::cout << "]";
 }
