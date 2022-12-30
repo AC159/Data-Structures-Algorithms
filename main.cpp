@@ -6,6 +6,7 @@
 #include "Dijkstra/Dijkstra.h"
 #include "KMPStringMatching/KMPStringMatching.h"
 #include "LevenshteinEditDistance/LevenshteinEditDistance.h"
+#include "Mergesort/Mergesort.h"
 
 void showpq( std::priority_queue< int, std::vector< int >, std::function< bool( int, int )>> gq )
 {
@@ -21,6 +22,8 @@ void showpq( std::priority_queue< int, std::vector< int >, std::function< bool( 
 int main()
 {
     quicksortMain();
+
+    mergesortMain();
 
     std::vector< int > v1 = { 20, 30, 40, 25, 15 };
 

@@ -43,7 +43,7 @@ void quicksortMain()
 
     quicksort( sequence, 0, sequenceSize - 1 );
 
-    std::cout << "Sorted vector: \n[";
+    std::cout << "Sorted vector with quicksort: \n[";
     for ( int i = 0; i < sequenceSize; ++i )
     {
         if ( i % 10 == 0 ) std::cout << "\n";
