@@ -7,6 +7,7 @@
 #include "KMPStringMatching/KMPStringMatching.h"
 #include "LevenshteinEditDistance/LevenshteinEditDistance.h"
 #include "Mergesort/Mergesort.h"
+#include "BinarySearch/BinarySearch.h"
 
 void showpq( std::priority_queue< int, std::vector< int >, std::function< bool( int, int )>> gq )
 {
@@ -67,6 +68,9 @@ int main()
     KMPStringMatchingMain();
 
     levenshteinEditDistanceMain();
+
+    std::cout << std::endl;
+    BinarySearchMain();
 
     return 0;
 }

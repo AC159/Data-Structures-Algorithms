@@ -1,0 +1,6 @@
+#ifndef ALGORITHMS_BINARYSEARCH_H
+#define ALGORITHMS_BINARYSEARCH_H
+
+void BinarySearchMain();
+
+#endif //ALGORITHMS_BINARYSEARCH_H
