@@ -8,6 +8,7 @@
 #include "LevenshteinEditDistance/LevenshteinEditDistance.h"
 #include "Mergesort/Mergesort.h"
 #include "BinarySearch/BinarySearch.h"
+#include "Trie/Trie.h"
 
 void showpq( std::priority_queue< int, std::vector< int >, std::function< bool( int, int )>> gq )
 {
@@ -71,6 +72,8 @@ int main()
 
     std::cout << std::endl;
     BinarySearchMain();
+
+    TrieMain();
 
     return 0;
 }
