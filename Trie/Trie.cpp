@@ -12,9 +12,9 @@ Trie::TrieNode::TrieNode()
 Trie::Trie() : root( new TrieNode() )
 {}
 
+/** Get top 3 (lexicographically minimum) words that start with this prefix in sorted order */
 void Trie::searchHelper( TrieNode* node, const string& currentPrefix, vector< string >& words )
 {
-    // Get top 3 (lexicographically minimum) products that start with this prefix sorted
     if ( words.size() == 3 ) return;
     if ( node->isWord ) words.push_back( currentPrefix );
 
