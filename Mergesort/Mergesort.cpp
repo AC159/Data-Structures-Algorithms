@@ -42,7 +42,7 @@ vector< int > mergeSort( vector< int >& nums, int low, int high )
         return { nums[ low ] };
     }
 
-    int mid = ( low + high ) / 2;
+    int mid = low + ( ( high - low ) / 2 );
     vector< int > lowHalf = mergeSort( nums, low, mid );
     vector< int > highHalf = mergeSort( nums, mid + 1, high );
 
@@ -61,7 +61,7 @@ void mergesortMain()
         nums[ i ] = std::rand() % 1000;
     }
 
-    vector<int> sorted = mergeSort( nums, 0, nums.size() - 1 );
+    vector< int > sorted = mergeSort( nums, 0, nums.size() - 1 );
 
     std::cout << "Sorted vector with mergesort: \n[";
     for ( int i = 0; i < sequenceSize; ++i )

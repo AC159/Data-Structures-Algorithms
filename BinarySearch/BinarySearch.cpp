@@ -10,7 +10,7 @@ using std::endl;
 void BinarySearchMain()
 {
     vector< int > values = { 1, 4, 6, 7, 8, 12, 15, 17, 18, 20 };
-    int target = 3;
+    int target = 6;
 
     int low = 0;
     int high = ( int ) values.size() - 1;
@@ -18,7 +18,7 @@ void BinarySearchMain()
 
     while ( low <= high )
     {
-        int middle = ( low + high ) / 2;
+        int middle = low + ( ( high - low ) / 2 );
         int value = values[ middle ];
 
         if ( value == target )
