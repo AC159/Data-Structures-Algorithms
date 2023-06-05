@@ -14,7 +14,7 @@ std::vector< int > preComputeLPSArray( const std::string& pattern )
 
     while ( i < pattern.size() )
     {
-        if ( lps[ previousLPS ] == lps[ i ] )
+        if ( pattern[ previousLPS ] == pattern[ i ] )
         {
             lps[ i ] = previousLPS + 1;
             ++previousLPS;
